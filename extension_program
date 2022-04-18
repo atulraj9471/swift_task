@@ -1,0 +1,147 @@
+//Implemented extension class in swift
+
+class Strng
+{
+    var name:String=""
+    
+    func display()
+    {
+        print("//name without extension")
+        print(name)
+    }
+}
+var obj=Strng();
+obj.name="AtulRaj";
+obj.display();
+
+
+//All capital
+extension Strng 
+{
+    func upper(name1:String) 
+    {
+        print("\n")
+        print("//all capital")
+        print(name1.uppercased())
+    }
+}
+obj.upper(name1 : "AtulRaj")
+
+
+//Concat two string
+extension Strng 
+{
+    func concat_str(name2 : String)
+    {
+        print("\n")
+        print("//concat two string Hello and Atul")
+        print("Hello" + name2)
+    }
+}
+obj.concat_str(name2 : "Atul")
+
+
+//reverse string
+extension Strng 
+{
+    func reverse_string(name3 : String)
+    {
+        print("\n")
+        print("//reverse string AtulRaj")
+        print(String(name3.reversed()))
+    }
+}
+obj.reverse_string(name3 : "AtulRaj")
+
+
+//remove character
+extension Strng
+{
+    func change_string() 
+    {
+        var name4 = "atul_raj"
+        let removeCharacters: Set<Character> = ["a"]
+        name4.removeAll(where: { removeCharacters.contains($0) } )
+        print("\n")
+        print("//remove character 'a' from atul_raj")
+        print(name4)
+    }
+}
+obj.change_string()
+
+
+//add character in end of string
+extension Strng
+{
+    func add_character_end()
+    {
+       var name5 = "Hello Atul"
+        let exclamationMark: Character = "!"
+        name5.append(exclamationMark)
+        print("\n")
+         print("//add character '!' in end of string")
+        print(name5)
+    }
+}
+obj.add_character_end()
+
+
+//add character in start of string
+extension Strng
+{
+    func add_character_start()
+    {
+        var myString = "Atul"
+        let index = 0
+        let character = "a" as Character
+
+        myString.insert(
+        character, at:
+        myString.index(myString.startIndex, offsetBy: index)
+        )
+        
+        print("\n")
+         print("//add character 'a' in start of string")
+        print(myString)
+    }
+}
+obj.add_character_start()
+
+
+//return vowel from string
+extension Strng
+{
+    
+    func allvowel()
+    {
+        print("\n")
+        print("//print all vowel from string 'atulraj' ")
+        let arr = ["u","i","e","a","o"]
+        let str = "atulraj"
+        str.forEach
+        {
+            if arr.contains($0.lowercased())
+            {
+                print($0)
+            }
+        }
+    }
+    
+}
+obj.allvowel()
+
+
+//print array of character from string 
+extension Strng
+
+{
+    func array_char()
+    {
+        let name = "atulraj"
+        let arr = Array(name)
+         print("\n")
+         print("//array of character from string 'atulraj' ")
+        print(arr)
+    }
+}
+obj.array_char()
